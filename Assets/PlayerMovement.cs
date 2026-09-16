@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
         {
             move += Vector3.left;
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            move += Vector3.up;
+        }
 
         transform.Translate(move * moveSpeed * Time.deltaTime);
     }
