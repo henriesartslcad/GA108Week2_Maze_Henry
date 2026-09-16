@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
     public float moveSpeed = 1.0f;
+    public float sprintSpeed = 2.0f;
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         {
             move += Vector3.up;
         }
+        
+        
 
         transform.Translate(move * moveSpeed * Time.deltaTime);
     }
